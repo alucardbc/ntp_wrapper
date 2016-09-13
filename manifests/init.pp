@@ -1,6 +1,6 @@
 class ntp_wrapper (
-  $server1 = '0.pool.ntp.org'
-  $server2 = '1.pool.ntp.org'
+  $server1 = '0.pool.ntp.org',
+  $server2 = '1.pool.ntp.org',
 ) {
 
   package { 'ntp':
