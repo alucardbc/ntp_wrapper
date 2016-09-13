@@ -20,8 +20,11 @@ restrict -6 ::1
 
 # Use public servers from the pool.ntp.org project.
 # Please consider joining the pool (http://www.pool.ntp.org/join.html).
-server <%= $ntp_wrapper::server1 %> iburst
-server <%= $ntp_wrapper::server2 %> iburst
+#server <%= $ntp_wrapper::server1 %> iburst
+#server <%= $ntp_wrapper::server2 %> iburst
+<% $ntp_wrapper::server.each |$s| { -%>
+server <%= $s %> iburst
+<% } -%>
 
 #broadcast 192.168.1.255 autokey	# broadcast server
 #broadcastclient			# broadcast client
