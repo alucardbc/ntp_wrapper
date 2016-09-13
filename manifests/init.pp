@@ -3,6 +3,6 @@ class ntp_wrapper (
 ) {
 
   class { 'ntp':
-    server => $server
+    servers => $server
   }
 }
