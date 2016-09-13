@@ -1,8 +1,6 @@
-class ntp_wrapper (
-  $server = ['0.pool.ntp.org', '1.pool.ntp.org']
-) {
+class ntp_wrapper {
 
-  class { 'ntp':
-    servers => $server
+  class { '::ntp':
+    servers => ['0.pool.ntp.org','1.pool.ntp.org','2.pool.ntp.org']
   }
 }
